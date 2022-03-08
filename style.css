@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Space+Mono&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  height: 97%;
+  width: 100%;
+  position: relative;
+}
+
+.scontainer {
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+.image__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+  border-bottom: none;
+  border-top: none;
+}
+img {
+  width: 539.22px;
+  height: 447.43px;
+}
+
+.right__header {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 64px;
+  line-height: 94.78px;
+  color: #333333;
+  font-family: "monospace";
+}
+
+.sub__heading {
+  font-family: "monospace";
+  margin-top: 36px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35.54px;
+  color: #4f4f4f;
+}
+
+.button__contaier {
+  font-weight: 700;
+  padding: 16px 23px;
+  font-size: 14px;
+  line-height: 20.73px;
+  background: #333333;
+  color: white;
+  margin-top: 64px;
+}
+
+.error {
+  font-family: "Inconsolata";
+  font-weight: 700;
+  font-size: 24px;
+  top: 40px;
+  left: 77px;
+  position: absolute;
+}
+
+@media only screen and (max-width: 850px) {
+  img {
+    width: 339.22px;
+    height: 247.43px;
+  }
+
+  .right__header {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 34px;
+    line-height: 55.78px;
+    color: #333333;
+    font-family: "monospace";
+  }
+
+  .sub__heading {
+    font-family: "monospace";
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #4f4f4f;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .scontainer {
+    flex-direction: column;
+  }
+
+  .right__container {
+    height: 100%;
+  }
+
+  .error {
+    display: block;
+    margin: 0 auto;
+    top: 5px;
+    left: 35%;
+  }
+
+  .image__container {
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .button__contaier {
+    display: block;
+    margin: 0 auto;
+    margin-top: 32px;
+  }
+}
+
+.footer {
+  width: fit-content;
+  display: block;
+  margin: 0 auto;
+}
