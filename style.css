@@ -1,136 +1,169 @@
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Space+Mono:wght@400;700&display=swap");
 
 * {
   padding: 0;
   margin: 0;
-  color: inherit;
-  font: inherit;
+  box-sizing: border-box;
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Space Mono', monospace;
+  background-color: #ffffff;
+  overflow-x: hidden;
 }
 
 .container {
-  height: 97%;
+  min-height: 100vh;
   width: 100%;
   position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .scontainer {
-  height: 100%;
-  justify-content: flex-start;
-  align-items: center;
+  flex: 1;
   display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
+
 .image__container {
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 50%;
-  border-bottom: none;
-  border-top: none;
 }
+
 img {
-  width: 539.22px;
-  height: 447.43px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
+.right__container {
+  flex: 1;
+  max-width: 586px;
 }
 
 .right__header {
   font-weight: 700;
-  font-style: normal;
-  font-size: 64px;
-  line-height: 94.78px;
+  font-size: clamp(48px, 5vw, 64px);
+  line-height: 1.2;
   color: #333333;
-  font-family: "monospace";
+  margin-bottom: 24px;
 }
 
 .sub__heading {
-  font-family: "monospace";
-  margin-top: 36px;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 35.54px;
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 1.5;
   color: #4f4f4f;
+  margin-bottom: 48px;
 }
 
 .button__contaier {
   font-weight: 700;
-  padding: 16px 23px;
+  padding: 24px 43px;
   font-size: 14px;
-  line-height: 20.73px;
   background: #333333;
   color: white;
-  margin-top: 64px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.button__contaier:hover {
+  background: #4f4f4f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .error {
-  font-family: "Inconsolata";
+  font-family: "Inconsolata", monospace;
   font-weight: 700;
   font-size: 24px;
+  position: absolute;
   top: 40px;
   left: 77px;
-  position: absolute;
+  text-transform: uppercase;
+}
+
+.footer {
+  text-align: center;
+  padding: 24px;
+  color: #4f4f4f;
+  font-family: "Inconsolata", monospace;
+  font-size: 14px;
+}
+
+.footer a {
+  color: #333333;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #4f4f4f;
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 850px) {
-  img {
-    width: 339.22px;
-    height: 247.43px;
+  .scontainer {
+    padding: 20px;
+    gap: 20px;
   }
-
+  
   .right__header {
-    font-weight: 700;
-    font-style: normal;
-    font-size: 34px;
-    line-height: 55.78px;
-    color: #333333;
-    font-family: "monospace";
+    margin-bottom: 16px;
   }
-
+  
   .sub__heading {
-    font-family: "monospace";
-    margin-top: 16px;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 32px;
-    color: #4f4f4f;
+    margin-bottom: 32px;
   }
 }
 
 @media only screen and (max-width: 430px) {
+  .container {
+    padding: 10px;
+  }
+  
   .scontainer {
     flex-direction: column;
-  }
-
-  .right__container {
-    height: 100%;
+    text-align: center;
   }
 
   .error {
-    display: block;
-    margin: 0 auto;
-    top: 5px;
-    left: 35%;
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+    margin-bottom: 24px;
   }
 
   .image__container {
-    align-items: center;
     width: 100%;
-    height: 100%;
+    padding: 20px;
   }
 
   .button__contaier {
-    display: block;
+    padding: 20px 32px;
     margin: 0 auto;
-    margin-top: 32px;
   }
-}
-
-.footer {
-  width: fit-content;
-  display: block;
-  margin: 0 auto;
+  
+  .right__container {
+    padding: 0 20px;
+  }
 }

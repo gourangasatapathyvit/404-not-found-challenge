@@ -5,29 +5,40 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 not found</title>
+  <meta name="description" content="404 Not Found - Custom error page">
+  <meta name="theme-color" content="#ffffff">
+  
+  <title>404 Not Found | Custom Error Page</title>
+  
   <link rel="stylesheet" href="style.css">
+  <!-- Preload critical fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Space+Mono:wght@400;700&display=swap" as="style">
+  <link rel="preload" as="image" href="Scarecrow.png">
 </head>
 
 <body>
   <div class="container">
-    <span class="error">404 not found</span>
+    <header>
+      <h1 class="error" aria-label="404 error">404 not found</h1>
+    </header>
 
-    <div class="scontainer">
-      <div class="image__container">
-        <img src="Scarecrow.png" alt="Scarecrow">
+    <main class="scontainer">
+      <div class="image__container" role="img" aria-label="Decorative scarecrow illustration">
+        <img src="Scarecrow.png" alt="Scarecrow illustration" width="539" height="447">
       </div>
 
-      <div class="right__container">
-        <h1 class="right__header">I have bad news<br> for you</h1>
-        <p class="sub__heading">The page you are looking <br>for might be removed or is<br> temporarily unavailable</p>
-        <button class="button__contaier">Back to homepage</button>
-      </div>
-    </div>
+      <section class="right__container">
+        <h2 class="right__header">I have bad news<br> for you</h2>
+        <p class="sub__heading">The page you are looking for might be removed or is temporarily unavailable</p>
+        <a href="/" class="button__contaier" role="button">Back to homepage</a>
+      </section>
+    </main>
 
     <footer class="footer">
-      <p class="footer">created by <a href="https://www.linkedin.com/in/gourangasatapathyvit" target="__blank">Gouranga
-          Satapathy</a></p>
+      <p>created by <a href="https://www.linkedin.com/in/gourangasatapathyvit" 
+                      target="_blank" 
+                      rel="noopener noreferrer">Gouranga Satapathy</a>
+      </p>
     </footer>
   </div>
 </body>
